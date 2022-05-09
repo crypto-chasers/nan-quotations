@@ -1,6 +1,6 @@
 const TOTAL = 24;
 let cards, current;
-const excludeFirst = ['01.jpg', '11.jpg', '12.jpg', '19.jpg'];
+const excludeFirst = ['01.webp', '11.webp', '12.webp', '19.webp'];
 
 init();
 console.log(cards)
@@ -19,7 +19,7 @@ function init() {
 function prepareCards(num) {
     let cards = []
     for (let i = 1; i <= num; i++) {
-        cards.push(i.toString().padStart(2, '0') + '.jpg')
+        cards.push(i.toString().padStart(2, '0') + '.webp')
     }
     return cards
 }
@@ -50,6 +50,6 @@ function change() {
         tipDom.classList.add("hidden")
     }
     let imgDom = document.getElementById('img');
-    imgDom.setAttribute('src', `./images/${cards[current]}`);
+    imgDom.setAttribute('src', `./webp/${cards[current]}`);
     current++
 }
