@@ -1,4 +1,4 @@
-const TOTAL = 24;
+const TOTAL = 25;
 let cards, current;
 const excludeFirst = ['01.webp', '11.webp', '12.webp', '19.webp'];
 
@@ -9,7 +9,7 @@ function init() {
     cards = prepareCards(TOTAL);
     while (true) {
         shuffle(cards);
-        if (!excludeFirst.includes(cards[0])){
+        if (!excludeFirst.includes(cards[0])) {
             break;
         }
     }
